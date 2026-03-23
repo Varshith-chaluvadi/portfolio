@@ -144,7 +144,6 @@ function SkillsSection() {
 
                   <div className="flex justify-between mb-1 text-sm">
                     <span>{skill.name}</span>
-                    <span className="text-gray-400">{skill.level}%</span>
                   </div>
 
                   <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
