@@ -1,3 +1,4 @@
+// v2 - skills displayed as badges, no percentages
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
