@@ -120,7 +120,7 @@ function Projects() {
                 }}
                 category="Data Science"
                 title="FIFA World Cup Analysis"
-                image="/projects/climate1.png"
+                image="/projects/fifa1.png"
               />
             </Animate>
           )}
