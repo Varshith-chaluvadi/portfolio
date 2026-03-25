@@ -13,7 +13,11 @@ export const projectData = {
     projectDesc:
       "Cleaned and preprocessed 20+ years of FIFA World Cup data using Pandas, handling missing values and inconsistent formats, boosting data reliability by 30%. Performed exploratory data analysis to identify team performance patterns, goal distribution, and win ratios, uncovering key statistical insights across 10,000 match records. Formulated statistical comparisons and performance metrics to assess top-performing teams and scoring efficiency across tournaments.",
 
-    images: [],
+    images: [
+      "/projects/fifa1.png",
+      "/projects/fifa2.png",
+      "/projects/fifa3.png",
+    ],
 
     openProject: false,
 
