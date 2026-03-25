@@ -9,44 +9,44 @@ const skillCategories = [
     title: "Languages",
     color: "#00d4ff",
     skills: [
-      { name: "Python", level: 90 },
-      { name: "Java", level: 75 },
-      { name: "C", level: 80 },
-      { name: "C++", level: 78 },
-      { name: "SQL", level: 82 },
+      { name: "Python" },
+      { name: "Java" },
+      { name: "C" },
+      { name: "C++" },
+      { name: "SQL" },
     ],
   },
   {
     title: "Frameworks & Libraries",
     color: "#7b68ee",
     skills: [
-      { name: "React", level: 85 },
-      { name: "NodeJS", level: 80 },
-      { name: "Bootstrap", level: 85 },
-      { name: "Flask", level: 88 },
-      { name: "Streamlit", level: 90 },
+      { name: "React" },
+      { name: "NodeJS" },
+      { name: "Bootstrap" },
+      { name: "Flask" },
+      { name: "Streamlit" },
     ],
   },
   {
     title: "Tools / Platforms",
     color: "#ff6b9d",
     skills: [
-      { name: "MySQL", level: 82 },
-      { name: "MongoDB", level: 78 },
-      { name: "Git/GitHub", level: 88 },
-      { name: "Pandas", level: 90 },
-      { name: "NumPy", level: 85 },
+      { name: "MySQL" },
+      { name: "MongoDB" },
+      { name: "Git/GitHub" },
+      { name: "Pandas" },
+      { name: "NumPy" },
     ],
   },
   {
     title: "Soft Skills",
     color: "#00ff88",
     skills: [
-      { name: "Problem-Solving", level: 90 },
-      { name: "Team Player", level: 88 },
-      { name: "Adaptability", level: 85 },
-      { name: "Communication", level: 80 },
-      { name: "Analytical Thinking", level: 88 },
+      { name: "Problem-Solving" },
+      { name: "Team Player" },
+      { name: "Adaptability" },
+      { name: "Communication" },
+      { name: "Analytical Thinking" },
     ],
   },
 ];
@@ -58,7 +58,6 @@ function SkillsSection() {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-
       gsap.fromTo(
         ".skill-category",
         { y: 50, opacity: 0 },
@@ -73,26 +72,6 @@ function SkillsSection() {
           },
         }
       );
-
-      const bars = document.querySelectorAll<HTMLElement>(".skill-bar-fill");
-
-      bars.forEach((bar) => {
-        const level = bar.dataset.level;
-
-        gsap.fromTo(
-          bar,
-          { width: "0%" },
-          {
-            width: `${level}%`,
-            duration: 1.5,
-            scrollTrigger: {
-              trigger: bar,
-              start: "top 90%",
-            },
-          }
-        );
-      });
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -138,25 +117,19 @@ function SkillsSection() {
               {category.title}
             </h3>
 
-            <div className="space-y-4">
+            <div className="flex flex-wrap gap-2">
               {category.skills.map((skill) => (
-                <div key={skill.name}>
-
-                  <div className="flex justify-between mb-1 text-sm">
-                    <span>{skill.name}</span>
-                  </div>
-
-                  <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                    <div
-                      className="skill-bar-fill h-full rounded-full"
-                      data-level={skill.level}
-                      style={{
-                        background: `linear-gradient(90deg, ${category.color}, ${category.color}80)`
-                      }}
-                    />
-                  </div>
-
-                </div>
+                <span
+                  key={skill.name}
+                  className="px-4 py-1.5 rounded-full text-sm font-medium border"
+                  style={{
+                    borderColor: `${category.color}60`,
+                    color: category.color,
+                    backgroundColor: `${category.color}10`,
+                  }}
+                >
+                  {skill.name}
+                </span>
               ))}
             </div>
           </div>

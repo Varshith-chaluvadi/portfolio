@@ -82,7 +82,7 @@ function BottomNav() {
             </div>
 
             <div className="flex flex-col gap-2 mb-10 text-center items-center justify-center text-foreground/40 text-xs lg:text-md">
-              <div>Specializing in Artificial Intelligence and Machine Learning</div>
+              <div>Specializing in Data Science and Machine Learning</div>
               <div className="flex items-center">
                 | Developed with{" "}
                 <span
